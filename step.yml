@@ -1,0 +1,47 @@
+title: |-
+  Unity install
+summary: |
+  Install a specific version of Unity and the android and ios modules.
+description: |
+  This step involves setting up the Unity development environment within the pipeline. 
+  
+  It ensures that the required version of Unity is correctly installed and configured, 
+  enabling seamless building and testing of the project. 
+  
+  The process includes downloading the Unity installer for the desired version, 
+  executing the installer with specified arguments to install Unity components, and validating the successful installation.
+
+website: https://github.com/bitrise-steplib/bitrise-step-unity-install
+source_code_url: https://github.com/bitrise-steplib/bitrise-step-unity-install
+support_url: https://github.com/bitrise-steplib/bitrise-step-unity-install
+
+type_tags:
+  - installer
+
+project_type_tags:
+  - ios
+  - macos
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - unity_version:
+    opts:
+      title: "The version of the Unity engine"
+      summary: "This variable stores the version of the Unity engine being used"
+      description: |
+        This variable is used to store the version of the Unity engine that the project is built with. 
+        It ensures that the project runs as intended on the specified Unity version.
+      is_required: true
+      is_sensitive: false
+  - unity_version_changeset:
+    opts:
+      title: "The changeset ID of the Unity version"
+      summary: "This variable stores the Unity changeset ID for the project's version of the Unity engine"
+      description: |
+        This variable stores the Unity changeset ID (or hash) that corresponds to the specific version of the Unity engine used in the project. 
+        It ensures that the project runs as intended on the specified Unity version.
+      is_required: true
+      is_sensitive: false
