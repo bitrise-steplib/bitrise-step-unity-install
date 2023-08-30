@@ -50,7 +50,7 @@ There are no outputs defined in this step
 
 ## 🙋 Contributing
 
-We welcome [pull requests](https://github.com/bitrise-steplib/bitrise-step-activate-tuist-cache/pulls) and [issues](https://github.com/bitrise-steplib/bitrise-step-activate-tuist-cache/issues) against this repository.
+We welcome [pull requests](https://github.com/bitrise-steplib/bitrise-step-unity-install/pulls) and [issues](https://github.com/bitrise-steplib/bitrise-step-unity-install/issues) against this repository.
 
 For pull requests, work on your changes in a forked repository and use the Bitrise CLI to [run step tests locally](https://devcenter.bitrise.io/bitrise-cli/run-your-first-build/).
 
