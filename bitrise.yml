@@ -37,7 +37,10 @@ workflows:
 
   check:
     steps:
-    - git::https://github.com/bitrise-steplib/steps-check.git: { }
+    - git::https://github.com/bitrise-steplib/steps-check.git@bash-step-support:
+        inputs:
+        - workflow: lint
+        - skip_go_checks: yes
   # ----------------------------------------------------------------
   # --- workflows to Share this step into a Step Library
   audit-this-step:
