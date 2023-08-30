@@ -1,14 +1,21 @@
-# Unity Installation Workflow for macOS on Bitrise
-
+# Unity install
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-unity-install?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-unity-install/releases)
 
-This workflow automates the installation of Unity Hub and specific Unity versions on macOS (Darwin) through Homebrew and Unity Hub's command-line interface. It also includes the installation of necessary modules.
+Install a specific version of Unity and the android and ios modules.
+
 
 <details>
 <summary>Description</summary>
 
-This workflow automates the installation of Unity Hub and specified Unity versions along with required modules on macOS (Darwin) using Homebrew and Unity Hub's command-line interface.
+This step involves setting up the Unity development environment within the pipeline.
+
+It ensures that the required version of Unity is correctly installed and configured,
+enabling seamless building and testing of the project.
+
+The process includes downloading the Unity installer for the desired version,
+executing the installer with specified arguments to install Unity components,
+and validating the successful installation.
 
 </details>
 
@@ -18,9 +25,7 @@ Add this step directly to your workflow in the [Bitrise Workflow Editor](https:/
 
 You can also run this step directly with [Bitrise CLI](https://github.com/bitrise-io/bitrise).
 
-### Example
-
-Archive, then export both development and app-store IPAs:
+### Examples
 
 ```yaml
 steps:
@@ -31,7 +36,6 @@ steps:
     - unity_version_changeset: fb119bb0b476
 ```
 
-
 ## ⚙️ Configuration
 
 <details>
@@ -39,8 +43,8 @@ steps:
 
 | Key | Description | Flags | Default |
 | --- | --- | --- | --- |
-| `unity_version` | This variable is used to store the version of the Unity engine that the project is built with. | required |  |
-| `unity_version_changeset` | This variable stores the Unity changeset ID for the project's version of the Unity engine. | required |  |
+| `unity_version` | This variable is used to store the version of the Unity engine that the project is built with. It ensures that the project runs as intended on the specified Unity version.  | required |  |
+| `unity_version_changeset` | This variable stores the Unity changeset ID (or hash) that corresponds to the specific version of the Unity engine used in the project. It ensures that the project runs as intended on the specified Unity version.  | required |  |
 </details>
 
 <details>
