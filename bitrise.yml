@@ -35,6 +35,9 @@ workflows:
         - unity_version: 2022.3.1f1
         - unity_version_changeset: fb119bb0b476
 
+  check:
+    steps:
+      - git::https://github.com/bitrise-steplib/steps-check.git: { }
   # ----------------------------------------------------------------
   # --- workflows to Share this step into a Step Library
   audit-this-step:
