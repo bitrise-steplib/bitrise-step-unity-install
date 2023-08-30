@@ -3,8 +3,6 @@ default_step_lib_source: https://github.com/bitrise-steplib/bitrise-step-unity-i
 
 app:
   envs:
-  # If you want to share this step into a StepLib
-  - BITRISE_STEP_ID: unity
   - BITRISE_STEP_VERSION: 0.0.1
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/bitrise-steplib/bitrise-step-unity-install.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
@@ -39,9 +37,6 @@ workflows:
     steps:
     - git::https://github.com/bitrise-steplib/steps-check.git:
         inputs:
-        - skip_go_checks: "yes"
-    steps:
-    - git::https://github.com/bitrise-steplib/steps-check.git:
-        inputs:
         - workflow: lint
-        - skip_go_checks: yes
+        - skip_go_checks: "yes"
+
