@@ -39,5 +39,9 @@ workflows:
     steps:
     - git::https://github.com/bitrise-steplib/steps-check.git:
         inputs:
+        - skip_go_checks: "yes"
+    steps:
+    - git::https://github.com/bitrise-steplib/steps-check.git:
+        inputs:
         - workflow: lint
         - skip_go_checks: yes
