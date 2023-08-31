@@ -1,4 +1,4 @@
-format_version: 4
+format_version: 11
 default_step_lib_source: https://github.com/bitrise-steplib/bitrise-step-unity-install.git
 
 app:
@@ -8,7 +8,12 @@ app:
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
 workflows:
-  test:
+  e2e:
+    steps:
+    - git::https://github.com/bitrise-steplib/steps-check.git:
+        inputs:
+        - workflow: e2e
+  sample:
     steps:
     - change-workdir:
         title: Switch working dir to test / _tmp dir
