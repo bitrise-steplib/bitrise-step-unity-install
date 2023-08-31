@@ -31,9 +31,9 @@ inputs:
 - unity_version:
   opts:
     title: The version of the Unity engine
-    summary: This variable stores the version of the Unity engine being used
+    summary: The version of the Unity engine used for building the project.
     description: |
-      This variable is used to store the version of the Unity engine that the project is built with.
+       The version of the Unity engine used for building the project.
       It ensures that the project runs as intended on the specified Unity version.
     is_required: true
     is_sensitive: false
