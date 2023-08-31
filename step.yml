@@ -30,7 +30,7 @@ toolkit:
 inputs:
 - unity_version:
   opts:
-    title: The version of the Unity engine
+    title: Unity version
     summary: The version of the Unity engine used for building the project.
     description: |
        The version of the Unity engine used for building the project.
