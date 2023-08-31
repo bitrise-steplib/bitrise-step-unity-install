@@ -24,9 +24,9 @@ description: |
   An example URL:
   https://download.unity3d.com/download_unity/fbf46ad88f3d/UnityDownloadAssistant-2023.1.11f1.dmg
   
-  In this URL, the version is 2023.1.11f1 and the changeset is fbf46ad88f3d.
+  In this URL, the version is **2023.1.11f1** and the changeset is **fbf46ad88f3d**.
   
-  parameters from the URL:
+  Parameters from the URL:
    unity_version: 2023.1.11f1
    unity_version_changeset: fbf46ad88f3d
 
