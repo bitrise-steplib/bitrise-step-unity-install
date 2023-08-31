@@ -1,4 +1,4 @@
-# Unity install
+# Install Unity
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-unity-install?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-unity-install/releases)
 
@@ -17,11 +17,25 @@ The process includes downloading the Unity installer for the desired version,
 executing the installer with specified arguments to install Unity components,
 and validating the successful installation.
 
-parameters:
- unity_version: 2022.3.1f1
- unity_version_changeset: fb119bb0b476
+Extracting Version and Changeset from Unity download URL. The Unity download URLs contain the version and 
+changeset information in the following format:
 
-More details: https://unity.com/download 
+https://download.unity3d.com/download_unity/{changeset}/{filename}
+
+Where:
+- {changeset}: The unique identifier for the changeset.
+- {filename}: The name of the Unity installer file.
+
+An example URL:
+https://download.unity3d.com/download_unity/fbf46ad88f3d/UnityDownloadAssistant-2023.1.11f1.dmg
+
+In this URL, the version is 2023.1.11f1 and the changeset is fbf46ad88f3d.
+
+parameters from the URL:
+ unity_version: 2023.1.11f1
+ unity_version_changeset: fbf46ad88f3d
+
+More details: https://unity.com/download
 
 </details>
 
@@ -50,7 +64,7 @@ steps:
 | Key | Description | Flags | Default |
 | --- | --- | --- | --- |
 | `unity_version` | The version of the Unity engine used for building the project. It ensures that the project runs as intended on the specified Unity version.  | required |  |
-| `unity_version_changeset` | The Unity changeset ID or hash for the used Unity version. the specific version of the Unity engine used in the project. It ensures that the project runs as intended on the specified Unity version.  | required |  |
+| `unity_version_changeset` | The Unity changeset ID or hash for the used Unity version. It ensures that the project runs as intended on the specified Unity version.  | required |  |
 </details>
 
 <details>
