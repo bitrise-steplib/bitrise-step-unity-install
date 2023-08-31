@@ -40,9 +40,9 @@ inputs:
 - unity_version_changeset:
   opts:
     title: Changeset ID of the Unity version
-    summary: This variable stores the Unity changeset ID for the project's version of the Unity engine
+    summary: The Unity changeset ID or hash for the used Unity version.
     description: |
-      This variable stores the Unity changeset ID (or hash) that corresponds to
+      The Unity changeset ID or hash for the used Unity version.
       the specific version of the Unity engine used in the project.
       It ensures that the project runs as intended on the specified Unity version.
     is_required: true
