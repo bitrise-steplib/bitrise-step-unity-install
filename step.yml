@@ -49,7 +49,6 @@ inputs:
     summary: The Unity changeset ID or hash for the used Unity version.
     description: |
       The Unity changeset ID or hash for the used Unity version.
-      the specific version of the Unity engine used in the project.
       It ensures that the project runs as intended on the specified Unity version.
     is_required: true
     is_sensitive: false
