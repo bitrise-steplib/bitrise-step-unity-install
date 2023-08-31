@@ -12,11 +12,11 @@ description: |
   executing the installer with specified arguments to install Unity components,
   and validating the successful installation.
   
- parameters:
+  parameters:
    unity_version: 2022.3.1f1
    unity_version_changeset: fb119bb0b476
   
- More details: https://unity.com/download 
+  More details: https://unity.com/download 
 
 website: https://github.com/bitrise-steplib/bitrise-step-unity-install
 source_code_url: https://github.com/bitrise-steplib/bitrise-step-unity-install

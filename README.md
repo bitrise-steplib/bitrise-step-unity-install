@@ -17,6 +17,12 @@ The process includes downloading the Unity installer for the desired version,
 executing the installer with specified arguments to install Unity components,
 and validating the successful installation.
 
+parameters:
+ unity_version: 2022.3.1f1
+ unity_version_changeset: fb119bb0b476
+
+More details: https://unity.com/download 
+
 </details>
 
 ## 🧩 Get started
@@ -43,8 +49,8 @@ steps:
 
 | Key | Description | Flags | Default |
 | --- | --- | --- | --- |
-| `unity_version` | This variable is used to store the version of the Unity engine that the project is built with. It ensures that the project runs as intended on the specified Unity version.  | required |  |
-| `unity_version_changeset` | This variable stores the Unity changeset ID (or hash) that corresponds to the specific version of the Unity engine used in the project. It ensures that the project runs as intended on the specified Unity version.  | required |  |
+| `unity_version` | The version of the Unity engine used for building the project. It ensures that the project runs as intended on the specified Unity version.  | required |  |
+| `unity_version_changeset` | The Unity changeset ID or hash for the used Unity version. the specific version of the Unity engine used in the project. It ensures that the project runs as intended on the specified Unity version.  | required |  |
 </details>
 
 <details>
