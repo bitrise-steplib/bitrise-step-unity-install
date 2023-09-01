@@ -1,0 +1,68 @@
+title: |-
+  Install Unity
+summary: |
+  Install a specific version of Unity and the android and ios modules.
+description: |
+  This step involves setting up the Unity development environment within the pipeline.
+
+  It ensures that the required version of Unity is correctly installed and configured,
+  enabling seamless building and testing of the project.
+
+  The process includes downloading the Unity installer for the desired version,
+  executing the installer with specified arguments to install Unity components,
+  and validating the successful installation.
+
+  Extracting Version and Changeset from Unity download URL. The Unity download URLs contain the version and
+  changeset information in the following format:
+
+  https://download.unity3d.com/download_unity/{changeset}/{filename}
+
+  Where:
+  - {changeset}: The unique identifier for the changeset.
+  - {filename}: The name of the Unity installer file.
+
+  An example URL:
+  https://download.unity3d.com/download_unity/fbf46ad88f3d/UnityDownloadAssistant-2023.1.11f1.dmg
+
+  In this URL, the version is **2023.1.11f1** and the changeset is **fbf46ad88f3d**.
+
+  Parameters from the URL:
+   unity_version: 2023.1.11f1
+   unity_version_changeset: fbf46ad88f3d
+
+  More details: https://unity.com/download
+
+website: https://github.com/bitrise-steplib/bitrise-step-unity-install
+source_code_url: https://github.com/bitrise-steplib/bitrise-step-unity-install
+support_url: https://github.com/bitrise-steplib/bitrise-step-unity-install
+
+type_tags:
+- installer
+
+project_type_tags:
+- ios
+- macos
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+- unity_version:
+  opts:
+    title: Unity version
+    summary: The version of the Unity engine used for building the project.
+    description: |
+      The version of the Unity engine used for building the project.
+      It ensures that the project runs as intended on the specified Unity version.
+    is_required: true
+    is_sensitive: false
+- unity_version_changeset:
+  opts:
+    title: Changeset ID of the Unity version
+    summary: The Unity changeset ID or hash for the used Unity version.
+    description: |
+      The Unity changeset ID or hash for the used Unity version.
+      It ensures that the project runs as intended on the specified Unity version.
+    is_required: true
+    is_sensitive: false
